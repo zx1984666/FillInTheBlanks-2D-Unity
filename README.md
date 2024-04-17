@@ -43,3 +43,49 @@ CharacterSlot.cs
 注意调整漂浮汉字的数量和速度，以确保游戏体验平衡。
 # 版权信息
 本项目遵循 MIT 开源许可协议，可自由使用、修改和分发，但需附上原始版权声明。
+===========================================================================================================================================================================================================================
+# FillInTheBlanks-2D-Unity
+Based on Unity development of the word fill in the blanks game
+This is a small game project framework based on Unity engine development, called "Fill in the blanks". The framework aims to provide an infrastructure for developers to quickly build Chinese character fill-in-the-blank games, as well as an interesting Chinese character learning and Scrabble game experience for players.
+
+# About the game
+In the "Fill in the Blank" game, the player needs to complete the level by dragging the floating Chinese characters into the Chinese character box at the bottom and connecting them into the correct sentence. The characters float randomly in the scene, and the player needs to follow the prompts to find the correct characters and drag them to the corresponding positions. The game has multiple levels, each with different challenges and prompts.
+
+# Game scenario
+The game scene is divided into three main modules:
+
+Floating Chinese character module: A large number of Chinese characters are floating in the scene, and each Chinese character corresponds to a prefabricated body: FloatingCharacter.
+
+Chinese character box module: The box storing Chinese characters at the bottom of the scene, and each box storing Chinese characters corresponds to a prefabricated body: CharacterSlot.
+If the IsFixed property is checked, then the required Chinese characters need to be filled in the cell in advance, and the cell will not be affected by any interaction. The Chinese characters cannot be taken out or stored, and the Chinese characters are directly fixed
+
+Tip module: Tip button and tip page, the tip page is a Panel that opens when the tip button is clicked: TipsPanel.
+
+# Game Content
+What developers need to do
+Developers need to manually edit each level, including setting the number of characters in the scene, the speed at which they float, and the concatenation of Chinese characters into correct answer statements. These Settings have been written in the script, developers can directly edit in the visualization panel. It should be noted that there must be at least one Chinese character floating in the scene that can be connected to become the correct answer sentence, otherwise the player cannot complete the level.
+
+Players play content
+After entering the game, the player can open the prompt panel to see which Chinese characters need to be selected to find for the current level to splice the correct sentence. By dragging the floating Chinese characters to the bottom of the Chinese character box, the player can connect to the correct sentence to complete the level and enter the next level. Characters float around the scene at random speeds set by the developers, bouncing off when they touch a border or collide with other characters.
+
+# Script description
+FloatingWordGamePage.cs
+This script controls the overall logic of the game page, including functions such as switching levels, checking conditions, and so on.
+
+FloatingCharacter.cs
+The script of floating Chinese characters, realize the floating effect of Chinese characters, drag and drop functions.
+
+CharacterSlot.cs
+Chinese character box script, control Chinese character placement and click events and other functions.
+
+# Instructions
+Add the relevant script to the Unity project.
+Edit the Settings for each level as required by the game design.
+Floating Chinese characters and preforms of Chinese character frames are placed in the scene.
+Adjust the layout and aesthetics of the scene.
+Build and run the game, and have fun!
+# Considerations
+Make sure that each level has at least one Chinese character that can be linked into a correct answer statement to ensure that the player can complete the level.
+Pay attention to adjust the number and speed of floating characters to ensure a balanced game experience.
+# Copyright information
+This project is free to use, modify, and distribute under the MIT Open Source license, provided that the original copyright notice is attached.
